@@ -19,7 +19,6 @@ class Tests(unittest.TestCase):
         m1._break_entrance_and_exit()
         self.assertEqual(m1._cells[0][0].has_top_wall, False)
         self.assertEqual(m1._cells[m1.num_cols-1][m1.num_rows-1].has_bottom_wall, False)
-        win.wait_for_close()
         
     
 if __name__=="__main__":
