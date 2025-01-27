@@ -23,12 +23,20 @@ class Cell():
         bot_right = Point(self._x2, self._y2)
         if self.has_left_wall:
             self._win.draw_line(Line(top_left, bot_left), "black")
+        else:
+            self._win.draw_line(Line(top_left, bot_left), "white")
         if self.has_right_wall:
             self._win.draw_line(Line(top_right, bot_right), "black")
+        else:
+            self._win.draw_line(Line(top_right, bot_right), "white")
         if self.has_top_wall:
             self._win.draw_line(Line(top_left, top_right), "black")
+        else:
+            self._win.draw_line(Line(top_left, top_right), "white")
         if self.has_bottom_wall:
             self._win.draw_line(Line(bot_left, bot_right), "black")
+        else:
+            self._win.draw_line(Line(bot_left, bot_right), "white")
 
     def draw_move(self, to_cell, undo=False):
         startHorizontalCenter = self._x1 + ((self._x2 - self._x1) / 2)
